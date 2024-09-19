@@ -15,3 +15,18 @@ class Estudante extends Pessoa {
         this.curso = curso;
     }
 }
+
+// Classe Funcionario que herda de pessoa
+class Funcionario extends Pessoa {
+    constructor(nome, idade, altura, peso, salario) {
+        super(nome, idade, altura, peso);
+        this.salario = salario;
+    }
+}
+
+// Classe Aluno que herda de Estudante
+class Aluno extends Estudante {
+    constructor(nome, idade, altura, peso, curso, matricula) {
+        super(nome, idade, altura, peso, curso);
+    }
+}
