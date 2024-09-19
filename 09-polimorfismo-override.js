@@ -38,3 +38,15 @@ class Mago extends personagem {
         console.log(`${this.nome} lanca  ${this.feitico}!`);
     }
 }
+
+// Classe Arqueiro que herda de personagem
+class Arqueiro extends personagem {
+    constructor(nome, vida, tipoFlecha) {
+        super(nome, vida);
+        this.tipoFlecha = tipoFlecha;
+    }
+
+    atacar() {
+        console.log(`${this.nome} dispara flechas ${this.tipoFlecha}!`);
+    }
+}
