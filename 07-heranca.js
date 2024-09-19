@@ -24,10 +24,17 @@ class Funcionario extends Pessoa {
     }
 }
 
-// Classe Aluno que herda de Estudante
-class Aluno extends Estudante {
-    constructor(nome, idade, altura, peso, curso, matricula) {
-        super(nome, idade, altura, peso, curso);
+// Classe Diretor que herda de Funcionario
+class Diretor extends Funcionario {
+    constructor(nome, idade, altura, peso, salario) {
+        super(nome, idade, altura, peso, salario);
+    }
+}
+
+// Classe Professor que herda de Funcionario
+class Professor extends Funcionario {
+    constructor(nome, idade, altura, peso, salario) {
+        super(nome, idade, altura, peso, salario);
     }
 }
 
