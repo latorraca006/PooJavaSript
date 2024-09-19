@@ -50,3 +50,15 @@ class Arqueiro extends personagem {
         console.log(`${this.nome} dispara flechas ${this.tipoFlecha}!`);
     }
 }
+
+// Criando instancias de guerreiro, mago e arqueiro
+const guerreiro = new guerreiro("Arthur", 100, "espada");
+guerreiro.atacar(); // saida: arthur ataca com a espada!
+guerreiro.receberDano(20); // saida: arthur recebeu dano. Vida restante:80
+
+const mago = new Mago("merlin", 80, "bola de fogo");
+mago.atacar(); // saida: merlin recebeu 15 de dano. Vida restante: 65
+
+const arqueiro = new Arqueiro("legolas", 120, "explosiva");
+arqueiro.atacar(); // saida: legolas dispara flechas explosiva!
+arqueiro.receberDano(10); // saida: legolas recebeu 10 dano. Vida restante:80
