@@ -78,3 +78,18 @@ class Volei {
     );
   }
 }
+
+class Veiculo {
+  constructor(marca, modelo) {
+    this.marca = marca;
+    this.modelo = modelo;
+  }
+
+  info() {
+    return `Marca: ${this.marca}, Modelo: ${this.modelo}`;
+  }
+
+  som() {
+    return "Som do veículo.";
+  }
+}
