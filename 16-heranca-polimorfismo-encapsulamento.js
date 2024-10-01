@@ -91,3 +91,41 @@ class Assasino extends Personagem {
         console.log(`${this.nome} usa sua furtividade de nivel ${this.furtividade} para se esconder !`);
     }
 }
+
+//Classe derivada - Paladino
+class Paladino extends Personagem {
+    constructor(nome, nivel, mana, furtividade) {
+        super(nome, "Paladino", nivel, vida, mana);
+        this.fe = fe; // Atributo especifico
+    }
+
+    // Sobredescrevendo o metodo defesa
+    defesa() {
+        console.log(`${this.nome} se defendeu com o escudo sagrado, absorvendo mais dano com base na fe (${this.fe})!`);
+    }
+
+    // Metodo especifico
+    curar() {
+        console.log(`${this.nome} usa sua fe para curar a si mesmo ou aliados!`);
+    }
+}
+
+// Classe derivada - Meacanico
+class Meacanico extends Personagem {
+    constructor(nome, nivel, mana, engenharia) {
+        super(nome, "Meacanico", nivel, vida, mana);
+        this.engenharia = this.engenharia; // Atributo especifico
+    }
+
+    // Sobredescrevendo o metodo receberDano
+    receberDano(dano) {
+        const danoReduzido = dano - this.engenharia;
+        super.receberDano(danoReduzido);
+        console.log(`${this.nome} usou sua engenharia para receber p dano em ${this.engenharia}.`);
+    }
+
+    // Metodo especifico
+    construirTorre() {
+        console.log(`${this.nome} constriui uma torre defensiva!`);
+    }
+}
