@@ -18,23 +18,36 @@ class Personagem {
     }
 }
 
+// Classe derivada "Guerreiro"
+class Guerreiro extends Personagem {
+    constructor(nome, arma) {
+        super(nome);
+        this.arma = arma;
+    }
+
+    //implementação dos metodos abstratos da classe personagem
+    atacar() {
+        console.log(`${this.nome} ataca com a ${this.arma}!`);
+    }
+
+    defender() {
+        console.log(`${this.nome} se defendeu com um escudo!`);
+    }
+}
 
 // Classe derivada "Mago"
 class Mago extends Personagem {
-constructor(nome, magia) {
-    super(nome);
-    this.magia = magia;
+    constructor(nome, magia) {
+        super(nome);
+        this.magia = magia;
+    }
+
+    //implementação dos metodos abstratos da classe personagem
+    atacar() {
+        console.log(`${this.nome} lança a magia ${this.magia}!`);
+    }
+
+    defender() {
+        console.log(`${this.nome} defende-se com um escudo de magia!`);
+    }
 }
-
-//implementação dos metodos abstratos da classe personagem
-atacar() {
-    console.log(`${this.nome} lança a magia ${this.magia}!`);
-}
-
-defender() {
-    console.log(`${this.nome} utiliza a magia ${this.magia} para defender!`);
-}
-}
-
-
-
